@@ -3,6 +3,7 @@
 A simple Retrieval-Augmented Generation (RAG) system using Python, LangChain, and OpenAI's GPT-4/DeepSeek. We created Q&amp;A tool for recommending meal combinations based on nutritional requirements and cuisine preferences. Users can use our RAG to generate recipes corresponding to their specific requirements and fulfill their needs.
 ## Dataset
 We use the dataset All_Diets.csv containing recipes and their nutritional information including protein, carbs, and fats. In this way we can use the data in this table to inform the LLM model, meaning to be able to answer the user's questions more accurately.
+
 ![image](https://github.com/user-attachments/assets/fd0c1ee9-5e47-4b79-bf4d-a79d5b93879b)
 ## Embedding
 We deployed Ollama locally in this program and used LLaMA3 for embedding and storing inside the FAISS vector database. We transformed the dataset into a high-dimensional vector and implemented a semantic mapping. When a user asks a question, the question is embedded into a vector, and then a similarity computation (we use cosine similarity) is used to match relevant fragments.
